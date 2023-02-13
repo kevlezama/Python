@@ -6,6 +6,7 @@ class Employee:
                  employee_phone,
                  employee_contract_type,
                  employee_credential_number,
+                 employee_salary,
                  employee_start_contract_date,
                  employee_end_contract_date = None
                  ):
@@ -14,9 +15,11 @@ class Employee:
         self.employee_dni = employee_dni
         self.employee_phone = employee_phone
         self.employee_contract_type = employee_contract_type
+        self.employee_credential_number = employee_credential_number
+        self.employee_salary = employee_salary
         self.employee_start_contract_date = employee_start_contract_date
         self.employee_end_contract_date = employee_end_contract_date
-        self.employee_credential_number = employee_credential_number
+        
 
     def show_employee_data(self):
         return '***Employee data***' \
