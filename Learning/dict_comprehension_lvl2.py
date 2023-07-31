@@ -6,3 +6,5 @@ dict1={"Sedan": 1500, "SUV": 2000, "Pickup": 2500, "Minivan": 1600, "Van": 2400,
 #Type your answer here.
 lst1=[i.upper() for i in dict1.keys() if dict1[i] < 5000]
 print(lst1)
+
+

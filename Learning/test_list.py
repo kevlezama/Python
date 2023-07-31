@@ -27,16 +27,19 @@ rslt2 = [i * 5 for i in list1 if i == 3]
 print(rslt2)
 
 # Lambda 
-
 rslt = list(map(lambda i: i*5, list1))
-
 print(rslt)
 
-
 txns = [1.09, 23.56, 57.84, 4.56, 6.78]
-TAX_RATE = .08
-
+TAX_RATE = .09
 final_prices = map(TAX_RATE, txns)
 list(final_prices)
+
+
+
+
+
+
+
 
 
