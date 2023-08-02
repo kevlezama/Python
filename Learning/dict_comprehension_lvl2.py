@@ -12,6 +12,16 @@ rslt = map(lambda dict_key: dict_key.upper(), dict1.keys())
 print(list(rslt))
 
 
+#dic generation with list comprenhension
+number = [1,2,3,4]
+brands = ["Toyota","BMW","Chevrolet","Mercedez Benz"]
+
+rslt_dict_generation = {number[i]:brands[i] for i in range(len(number))}
+
+print(rslt_dict_generation)
+
+advance_dict_generation = zip(number,brands)
+print(dict(advance_dict_generation))
 
 
 
