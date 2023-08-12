@@ -1,0 +1,14 @@
+from abc import ABC, abstractmethod
+
+class MediaLoader(ABC):
+
+    @abstractmethod
+    def play(self) -> None:
+        raise NotImplementedError
+    
+    @property
+    @abstractmethod
+    def ext(self) -> str:
+        raise NotImplementedError
+    
+    
