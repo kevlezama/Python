@@ -1,0 +1,106 @@
+2023-08-23 23:50:22 - INFO - This is a debug message.
+2023-08-23 23:50:22 - WARNING - This is a debug message.
+2023-08-23 23:50:22 - ERROR - This is a debug message.
+2023-08-23 23:50:22 - CRITICAL - This is a debug message.
+2023-08-26 00:40:13 - INFO - Connection to test_1_db successfully done
+2023-08-26 00:40:31 - INFO - Engine(postgresql+psycopg2://postgres:***@localhost/test_1_db)
+2023-08-26 00:40:31 - INFO - Connection to test_1_db successfully done
+2023-08-26 00:44:42 - INFO - Engine(postgresql+psycopg2://postgres:***@localhost/test_1_db)
+2023-08-26 00:44:42 - INFO - Connection to test_1_db successfully done
+2023-08-26 00:44:42 - INFO - <sqlalchemy.engine.base.Connection object at 0x0000023D58123AF0>
+2023-08-26 00:45:45 - INFO - Engine(postgresql+psycopg2://postgres:***@localhost/test_1_db)
+2023-08-26 00:45:45 - INFO - Connection to test_1_db successfully done
+2023-08-26 00:45:45 - INFO - <sqlalchemy.engine.base.Connection object at 0x00000227FFF33BE0>
+2023-08-26 00:46:12 - INFO - Engine(postgresql+psycopg2://postgres:***@localhost/test_1_db)
+2023-08-26 00:46:12 - INFO - Connection to test_1_db successfully done
+2023-08-26 00:46:12 - INFO - <sqlalchemy.engine.base.Connection object at 0x000002A1F08E3C40>
+2023-08-26 00:46:12 - INFO - hi
+2023-08-26 00:49:26 - INFO - Engine(postgresql+psycopg2://postgres:***@localhost/test_1_db)
+2023-08-26 00:49:26 - INFO - Connection to test_1_db successfully done
+2023-08-26 00:49:26 - INFO - <sqlalchemy.engine.base.Connection object at 0x00000184298A3CA0>
+2023-08-26 00:49:26 - INFO - hi
+2023-08-26 00:54:51 - INFO - Engine(postgresql+psycopg2://postgres:***@localhost/test_1_db)
+2023-08-26 00:54:51 - INFO - Connection to test_1_db successfully done
+2023-08-26 00:54:51 - INFO - <sqlalchemy.engine.base.Connection object at 0x0000019C09FFBB20>
+2023-08-26 00:54:51 - ERROR - (psycopg2.errors.SyntaxError) syntax error at or near "hi"
+LINE 1: hi
+        ^
+
+[SQL: hi]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2023-08-26 00:54:51 - ERROR - (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT name_employee FROM public.employees]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2023-08-26 14:07:39 - INFO - Engine(postgresql+psycopg2://postgres:***@localhost/test_1_db)
+2023-08-26 14:07:39 - INFO - Connection to test_1_db successfully done
+2023-08-26 14:07:39 - INFO - <sqlalchemy.engine.base.Connection object at 0x00000234B80BBB20>
+2023-08-26 14:07:39 - ERROR - (psycopg2.errors.SyntaxError) syntax error at or near "hi"
+LINE 1: hi
+        ^
+
+[SQL: hi]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2023-08-26 14:07:39 - ERROR - (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT name_employee FROM public.employees]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2023-08-26 14:07:52 - INFO - Engine(postgresql+psycopg2://postgres:***@localhost/test_1_db)
+2023-08-26 14:07:52 - INFO - Connection to test_1_db successfully done
+2023-08-26 14:07:52 - INFO - <sqlalchemy.engine.base.Connection object at 0x000002674FE1BB20>
+2023-08-26 14:07:52 - ERROR - (psycopg2.errors.SyntaxError) syntax error at or near "hi"
+LINE 1: hi
+        ^
+
+[SQL: hi]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2023-08-26 14:07:52 - ERROR - (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT name_employee FROM public.employees]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2023-08-26 14:08:07 - INFO - Engine(postgresql+psycopg2://postgres:***@localhost/test_1_db)
+2023-08-26 14:08:07 - INFO - Connection to test_1_db successfully done
+2023-08-26 14:08:07 - INFO - <sqlalchemy.engine.base.Connection object at 0x0000019221FFBB20>
+2023-08-26 14:08:07 - ERROR - (psycopg2.errors.SyntaxError) syntax error at or near "hi"
+LINE 1: hi
+        ^
+
+[SQL: hi]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2023-08-26 14:08:07 - ERROR - (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT name_employee FROM public.employees]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2023-08-26 14:08:40 - INFO - Engine(postgresql+psycopg2://postgres:***@localhost/test_1_db)
+2023-08-26 14:08:40 - INFO - Connection to test_1_db successfully done
+2023-08-26 14:08:40 - INFO - <sqlalchemy.engine.base.Connection object at 0x0000021F52D6BF40>
+2023-08-26 14:09:13 - INFO - Engine(postgresql+psycopg2://postgres:***@localhost/test_1_db)
+2023-08-26 14:09:13 - INFO - Connection to test_1_db successfully done
+2023-08-26 14:09:13 - INFO - <sqlalchemy.engine.base.Connection object at 0x000001773427BF40>
+2023-08-26 14:09:25 - INFO - Engine(postgresql+psycopg2://postgres:***@localhost/test_1_db)
+2023-08-26 14:09:25 - INFO - Connection to test_1_db successfully done
+2023-08-26 14:09:25 - INFO - <sqlalchemy.engine.base.Connection object at 0x0000019A7FAFBF10>
+2023-08-26 14:09:53 - INFO - Engine(postgresql+psycopg2://postgres:***@localhost/test_1_db)
+2023-08-26 14:09:53 - INFO - Connection to test_1_db successfully done
+2023-08-26 14:09:53 - INFO - <sqlalchemy.engine.base.Connection object at 0x0000019ECB1FBB50>
+2023-08-26 14:10:03 - INFO - Engine(postgresql+psycopg2://postgres:***@localhost/test_1_db)
+2023-08-26 14:10:03 - INFO - Connection to test_1_db successfully done
+2023-08-26 14:10:03 - INFO - <sqlalchemy.engine.base.Connection object at 0x0000017356ECBF10>
+2023-08-26 16:21:54 - INFO - Engine(postgresql+psycopg2://postgres:***@localhost/test_1_db)
+2023-08-26 16:21:54 - INFO - Connection to test_1_db successfully done
+2023-08-26 16:21:54 - INFO - <sqlalchemy.engine.base.Connection object at 0x000001F10769BF10>
+2023-08-26 16:21:57 - INFO - Engine(postgresql+psycopg2://postgres:***@localhost/test_1_db)
+2023-08-26 16:21:57 - INFO - Connection to test_1_db successfully done
+2023-08-26 16:21:57 - INFO - <sqlalchemy.engine.base.Connection object at 0x00000137D592BF10>
+2023-08-26 16:21:58 - INFO - Engine(postgresql+psycopg2://postgres:***@localhost/test_1_db)
+2023-08-26 16:21:58 - INFO - Connection to test_1_db successfully done
+2023-08-26 16:21:58 - INFO - <sqlalchemy.engine.base.Connection object at 0x000002321332BF10>
+2023-08-26 16:21:59 - INFO - Engine(postgresql+psycopg2://postgres:***@localhost/test_1_db)
+2023-08-26 16:21:59 - INFO - Connection to test_1_db successfully done
+2023-08-26 16:21:59 - INFO - <sqlalchemy.engine.base.Connection object at 0x00000238FAE0BF10>
+2023-08-26 16:22:00 - INFO - Engine(postgresql+psycopg2://postgres:***@localhost/test_1_db)
+2023-08-26 16:22:00 - INFO - Connection to test_1_db successfully done
+2023-08-26 16:22:00 - INFO - <sqlalchemy.engine.base.Connection object at 0x0000027B275FBF10>
+2023-08-26 16:22:20 - INFO - Engine(postgresql+psycopg2://postgres:***@localhost/test_1_db)
+2023-08-26 16:22:20 - INFO - Connection to test_1_db successfully done
+2023-08-26 16:22:20 - INFO - <sqlalchemy.engine.base.Connection object at 0x000001C8C370BEB0>
