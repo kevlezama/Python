@@ -1,4 +1,4 @@
-import course_imp
+from course_imp import Courses
 
 class Categories():
 
@@ -6,7 +6,7 @@ class Categories():
             self,
             category_id: int,
             category_name: str,
-            courses_related: course_imp
+            courses_related: [Courses]
         ) -> None:
         self.category_id = category_id
         self.category_name = category_name
