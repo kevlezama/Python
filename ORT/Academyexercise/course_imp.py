@@ -1,4 +1,5 @@
 import json
+from course_imp import Courses
 
 class Courses():
 
@@ -7,12 +8,14 @@ class Courses():
             course_id: str,
             course_title: str,
             course_price: float,
-            course_rank: str
+            course_rank: str,
+            course_lessons: list
         ) -> None:
         self.course_id = course_id
         self.course_title = course_title
         self.course_price = course_price
         self.course_rank = course_rank
+        self.course_lessons = course_lessons
 
     def __repr__(self) -> str:
         nl = '\n'
@@ -59,4 +62,15 @@ class Courses():
         return self.course_id
     
 
+    def bind_lesson_and_courses(self, course: Courses):
+        """_summary_
+
+        Args:
+            course (Courses): _description_
+
+        Returns:
+            _type_: _description_
+        """
         
+        course_lessons_dict = dict.fromkeys(course.get_course_id, [self.course_lessons] )
+        return course_lessons_dict
