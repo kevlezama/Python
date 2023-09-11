@@ -1,5 +1,5 @@
 import json
-from course_imp import Courses
+from datetime import time
 
 class Courses():
 
@@ -74,3 +74,14 @@ class Courses():
         
         course_lessons_dict = dict.fromkeys(course.get_course_id, [self.course_lessons] )
         return course_lessons_dict
+
+
+class CoursesLessons:
+
+    course_id_related: Courses
+    lesson_name_plan: []
+    lesson_time_duration: time
+    lesson_time: str
+
+cl = CoursesLessons()
+print(cl)
