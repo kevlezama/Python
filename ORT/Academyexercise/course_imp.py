@@ -1,7 +1,7 @@
 import json
 from datetime import time
 
-class Courses():
+class Courses:
 
     def __init__(
             self,
@@ -19,7 +19,7 @@ class Courses():
 
     def __repr__(self) -> str:
         nl = '\n'
-        return f"{__class__.__name__}:{nl} ID: {self.course_id}{nl} Course Title: {self.course_title}{nl} Course Price: {self.course_price}{nl}"
+        return f"{__class__.__name__}:{nl} ID: {self.course_id}{nl} Course Title: {self.course_title}{nl} Course Price: {self.course_price}{nl} Rank: {self.course_rank}{nl} Lessons:{self.course_lessons}"
 
     def get_json_format(self):
         use_json_ftm = json.dumps(self.__dict__ , indent=4)
@@ -62,26 +62,24 @@ class Courses():
         return self.course_id
     
 
-    def bind_lesson_and_courses(self, course: Courses):
-        """_summary_
-
-        Args:
-            course (Courses): _description_
-
-        Returns:
-            _type_: _description_
-        """
-        
-        course_lessons_dict = dict.fromkeys(course.get_course_id, [self.course_lessons] )
-        return course_lessons_dict
+#    def get_courses_lessons(self, cl: CoursesLessons):
+#        
+#        course_lessons_dict = dict.fromkeys( )
+#        return course_lessons_dict
 
 
 class CoursesLessons:
 
-    course_id_related: Courses
-    lesson_name_plan: []
+    course_id_related: Courses.get_course_id
+    lesson_name_plan: {}
     lesson_time_duration: time
-    lesson_time: str
+    lesson_type: str
 
-cl = CoursesLessons()
-print(cl)
+
+course1 = Courses("A001BAF","Docker and Kubernets",100.00,"5 stars",[])
+print(course1)
+
+cl = (course1.get_course_id, {"Introduction": "What is Docker?"}, time(hour=1, minute=30),"V")
+
+# Falta agregar get_lessosns en la clase courses y que las enumere por titulo 
+

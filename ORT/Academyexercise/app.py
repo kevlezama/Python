@@ -25,8 +25,8 @@ from course_classroom_imp import CourseClassroom
 student1 = Student(1,"Kevin","kevlezama@gmail.com",False)
 # print(student1)
 
-course1 = Courses("A001BAF","Docker and Kubernets",100.00,"5 stars")
-course2 = Courses("C000354","Haskell",600.00,"5 stars")
+course1 = Courses("A001BAF","Docker and Kubernets",100.00,"5 stars",[])
+course2 = Courses("C000354","Haskell",600.00,"5 stars",[])
 # print(course1)
 
 category1 = Categories("IT0001","IT - Information and Technology", [])
