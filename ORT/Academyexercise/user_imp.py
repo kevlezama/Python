@@ -1,5 +1,11 @@
 import json
 
+""" This class should be a Abstract class. It is begin use as a Superclass for Student and Instructor classes.
+
+    Returns:
+        User: user class
+"""
+
 class Users():
 
     def __init__(
