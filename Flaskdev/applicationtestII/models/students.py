@@ -11,4 +11,5 @@ class Student(db.Model):
     __tablename__ = 'students'
 
     student_id: Mapped[int] = mapped_column(primary_key=True)
+
     studet_name: Mapped[str] = mapped_column(String(30))
