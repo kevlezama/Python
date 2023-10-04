@@ -1,10 +1,23 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Home page</h1>
-</body>
+
+    <head>
+        {% block head %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        {% endblock %}
+    </head>
+
+    <body>
+
+        <a href="students">Go to Students</a>
+        <a href="courses">Go to Courses</a>
+        <a href="instructor">Go to Instructor</a>
+        
+
+        <div id="content">{% block content %}{% endblock %}</div>
+
+    </body>
+
 </html>

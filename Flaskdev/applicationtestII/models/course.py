@@ -6,7 +6,7 @@ if TYPE_CHECKING:
 
 from typing import Optional, List
 
-# from sqlalchemy.dialects.postgresql import UUID
+
 from sqlalchemy import Uuid,ForeignKey, String, DateTime
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
@@ -27,6 +27,6 @@ class Course(db.Model):
     course_title: Mapped[str]
     course_price: Mapped[float] = mapped_column(default=0.0)
     course_rank: Mapped[str] = mapped_column(default=0)
-    course_instrcutor_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("instructor.instructor_uid"))
+    course_instrcutor_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("instructor.instructor_uid"), unique=True)
     course_instrutor: Mapped[List["Instructor"]] = relationship(back_populates="instructor_owned_courses")
 
