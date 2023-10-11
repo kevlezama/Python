@@ -1,0 +1,14 @@
+{% extends "home.html" %}
+{% block title %}Instrutor Saved!{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+{% for i in data %}
+    <li>{{ i }}</li>
+{% endfor %}
+{% endblock %}
