@@ -27,7 +27,3 @@ if __name__ == "__main__":
     #    print(instructors)
     #    instructor_name_list = [instructor.instructor_name for instructor in instructors]
     #    print(instructor_name_list)
-
-    
-
-

@@ -14,7 +14,7 @@ from routes.courses_route import courses_route
 def create_app():
 
     app = Flask(__name__)
-    app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql+psycopg2://postgres:admin@localhost/applicationtestii"
+    app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql+psycopg2://postgres:admin@localhost/test_1_db"
     app.config["SQLALCHEMY_ECHO"] = True
     app.config["SQLALCHEMY_RECORD_QUERIES"] = True
     app.config["SQLALCHEMY_TRACK_MODIFICATION"] = False
