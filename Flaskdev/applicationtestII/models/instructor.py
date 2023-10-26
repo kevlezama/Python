@@ -36,8 +36,8 @@ class Instructor(db.Model):
             instructor_name: str,
             instructor_middle_name: str,
             instructor_last_name: str,
-            instructor_full_name: str,
-            instructor_owned_courses: iter ) -> None:
+            instructor_full_name: str = None,
+            instructor_owned_courses: iter = [] ) -> None:
 
         self.instructor_uid = instructor_uid
         self.instructor_id = instructor_id

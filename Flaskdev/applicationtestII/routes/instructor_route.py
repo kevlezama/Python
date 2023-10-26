@@ -6,6 +6,9 @@ from models.instructor import Instructor
 
 from forms.instructor_form import InstructorForm
 
+import uuid
+
+
 instructor_route = Blueprint('instructor' ,__name__)
 
 @instructor_route.route('/instructor')
@@ -26,19 +29,32 @@ def get_form_instructor() -> any:
 @instructor_route.route('/instructor/add_instructor', methods=['GET', 'POST'])
 def create_instructor() -> any:
 
+    ins_uuid = uuid.uuid4()
+
     instructor_form = InstructorForm()
     if instructor_form.validate_on_submit():
+
         ins_id = instructor_form.instructor_id.data
         ins_name = instructor_form.instructor_name.data
         ins_mid_name = instructor_form.instructor_middle_name.data
         ins_last_name = instructor_form.instructor_last_name.data
         
-        instructor = Instructor(ins_id, ins_name, ins_mid_name, ins_last_name)
+        try:
 
-        db.session.add(instructor)
-        db.session.commit()
-        db.session.close()
+            instructor = Instructor(ins_uuid, ins_id, ins_name, ins_mid_name, ins_last_name)
+            db.session.add(instructor)
+            db.session.commit()
+            db.session.close()
+            return render_template("instructor_created_successfully.html")
 
-        return render_template("instructor_form_reply.html")
+        except Exception as e:
+            print(e)
+
     return render_template("instructor_form.html", title='Instructors', form =instructor_form)
+
+
+@instructor_route.route('/instructor/all_instructors', methods=['GET', 'POST'])
+def get_all_instructorsv1() -> any:
+    instructors = Instructor.query.all()
+    return render_template('instructor.html', instructors=instructors)
 
