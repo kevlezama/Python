@@ -9,9 +9,8 @@
 {% endblock %}
 {% block content %}
     <h1>Instrutors</h1><br>
-
 {% for i in instructors %}
-    <li>{{ i }}</li>
+    <h2>{{ i.instructor_id }}</h2><br>
+    <li>{{ i.instructor_name, i.instructor_middle_name, i.instructor_last_name}}</li><br>
 {% endfor %}
-    
 {% endblock %}

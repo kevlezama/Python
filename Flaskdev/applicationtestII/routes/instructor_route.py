@@ -1,13 +1,10 @@
 from flask import Blueprint, render_template, redirect
-
 from app import db
-
 from models.instructor import Instructor
-
 from forms.instructor_form import InstructorForm
-
 import uuid
 
+from sqlalchemy import select
 
 instructor_route = Blueprint('instructor' ,__name__)
 
@@ -56,5 +53,9 @@ def create_instructor() -> any:
 @instructor_route.route('/instructor/all_instructors', methods=['GET', 'POST'])
 def get_all_instructorsv1() -> any:
     instructors = Instructor.query.all()
+
     return render_template('instructor.html', instructors=instructors)
+
+
+
 
