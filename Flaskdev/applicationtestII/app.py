@@ -19,6 +19,9 @@ def create_app():
     app.config["SQLALCHEMY_RECORD_QUERIES"] = True
     app.config["SQLALCHEMY_TRACK_MODIFICATION"] = False
     app.config['SECRET_KEY'] = 'hard to guess string'
+
+    app.config["EXPLAIN_TEMPLATE_LOADING"] = True
+
     db.init_app(app)
     migrate = Migrate(app, db)
 
@@ -33,7 +36,7 @@ def create_app():
     
     with app.app_context():
         #db.drop_all()
-        #db.create_all()
+        db.create_all()
         print('Created Database!')
     
     return app

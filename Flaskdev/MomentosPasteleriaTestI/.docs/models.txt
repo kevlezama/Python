@@ -1,0 +1,10 @@
+User:
+    uuid: uuid
+    id: int
+    name: str
+    lastname: str
+    tier: str
+    user_paid: boolean
+    user_free: boolean
+    user_created_time: date
+
