@@ -8,3 +8,12 @@ User:
     user_free: boolean
     user_created_time: date
 
+
+Items:
+    
+
+Orders:
+    order_uuid: uuid
+    user_id: int
+    user_uuid: uuid
+    

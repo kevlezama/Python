@@ -15,7 +15,6 @@ from .urlsconfig import users_route
 def create_app():
 
     #Application configuration
-
     app = Flask(__name__)
     app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql+psycopg2://postgres:admin@localhost/MP"
     app.config["SQLALCHEMY_ECHO"] = True
@@ -35,8 +34,8 @@ def create_app():
 
     from models.user import User
 
-    #with app.app_context():
+    with app.app_context():
 
-        #db.create_all()
+        db.create_all()
 
     return app
