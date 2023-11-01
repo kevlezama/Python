@@ -34,8 +34,8 @@ def create_app():
 
     from models.user import User
 
-    with app.app_context():
+    #with app.app_context():
 
-        db.create_all()
+        #db.create_all()
 
     return app
