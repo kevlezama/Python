@@ -1,4 +1,3 @@
-
 # Flask framework
 from flask import Blueprint, jsonify, request
 
@@ -6,8 +5,8 @@ from flask import Blueprint, jsonify, request
 from sqlalchemy import select
 
 # Application packages
-from config.dbconfig import db
-from models.user import User
+from dbconfig import db
+from models.user2 import User
 
 # Python buildin 
 import uuid
@@ -19,6 +18,7 @@ users_route  = Blueprint('users' ,__name__)
 def show_all_users() -> any:
     stm = select(User).order_by(User.user_id)
     user_query = db.session.execute(stm).all()
+    print(user_query)
     return jsonify(user_query)
 
 
@@ -46,7 +46,7 @@ def create_user() -> any:
     user_created_data_timestamp = datetime.datetime.now()
 
     user = User(
-        user_uuid,
+        #user_uuid,
         req_user_id,
         req_user_name, 
         req_user_last_name, 
@@ -60,7 +60,7 @@ def create_user() -> any:
     db.session.commit()
     db.session.close()
 
-    return jsonify({"response":201})
+    return jsonify(user)
 
 
     

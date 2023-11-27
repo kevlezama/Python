@@ -1,0 +1,23 @@
+client
+
+{
+    "client_id":45983234,
+    "client_name":"Mariajose",
+    "client_last_name":"",
+    "client_email":"mimix@gmail.com",
+    "client_state":"Buenos Aires",
+    "client_city":"CABA",
+    "client_delivery_address":"Carranza 2343" 
+}
+
+
+User
+{
+    "user_id":95951445,
+    "user_name":"Kevin",
+    "user_last_name":"Lezama",
+    "user_tier_rank":"Tier1",
+    "user_paid":false,
+    "user_free":true
+}
+
