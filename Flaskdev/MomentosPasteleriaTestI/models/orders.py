@@ -8,8 +8,6 @@ if TYPE_CHECKING:
     from .items import Items
     from .client import Client
 
-
-
 import uuid
 import datetime
 
