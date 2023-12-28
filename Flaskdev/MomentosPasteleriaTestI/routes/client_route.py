@@ -1,6 +1,6 @@
 
 # Flask framework
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, request, jsonify, make_response
 
 # Sqlalchemy ORM API
 from sqlalchemy import select
@@ -12,15 +12,19 @@ from models.client import Client
 # Python buildin 
 import uuid
 import datetime
+import json
 
 
 client_route  = Blueprint('clients' ,__name__)
 
+CLIENTS_ORDER_BY_CLIENT_ID_STM = select(Client).order_by(Client.client_id)
+
 @client_route.route('/clients/getall/clients', methods=['GET'])
 def get_all_clients():
-    stm = select(Client).order_by(Client.client_id)
-    query_execution = db.session.execute(stm).all()
-    return jsonify(query_execution, )
+    query_execution = db.session.execute(CLIENTS_ORDER_BY_CLIENT_ID_STM).all()
+    #clients = Client.query.all()
+    #return clients
+    return query_execution
 
 @client_route.route('/clients/getall/activeclients', methods=['GET'])
 def get_all_active_client():
