@@ -39,7 +39,6 @@ def create_items():
 
     request_data = request.get_data()
     
-
     print(request_data)
 
 
