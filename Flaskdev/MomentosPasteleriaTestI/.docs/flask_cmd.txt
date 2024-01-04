@@ -1,0 +1,9 @@
+db Migrations
+    at the top of the project execute follow command to create and initialize db Migrations
+        >flask db init
+
+    then following command to execute de Migration with a messge execute following cmd:
+        >flask db migrate -m "Initial migration."
+
+    Then you can apply the changes described by the migration script to your database:
+        >flask db upgrade

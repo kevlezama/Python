@@ -23,6 +23,9 @@ CLIENTS_ORDER_BY_CLIENT_ID_STM = select(Client).order_by(Client.client_id)
 def get_all_clients():
     query_execution = db.session.execute(CLIENTS_ORDER_BY_CLIENT_ID_STM).all()
     #clients = Client.query.all()
+    with db.session as session:
+        for row in session.execute(CLIENTS_ORDER_BY_CLIENT_ID_STM):
+            print(row)
     #return clients
     return query_execution
 
@@ -34,7 +37,7 @@ def get_all_active_client():
 def create_new_client() -> any:
 
     request_data = request.get_json()
-
+    
     clt_id = request_data['client_id']
     clt_name = request_data['client_name'] 
     clt_last_name = request_data['client_last_name']
@@ -45,6 +48,10 @@ def create_new_client() -> any:
     clt_orders = {}
     #user_uuid = uuid.uuid4()
     user_created_data_timestamp = datetime.datetime.now()
+
+    CLIENTS_ORDER_BY_CLIENT_ID_STM.where(Client.client_email)
+
+
 
     client = Client(
         #user_uuid,
@@ -64,7 +71,6 @@ def create_new_client() -> any:
     db.session.commit()
   
 
-    return jsonify(client)
-
+    return jsonify(client), 200
 
     #Crear un metodo para obtener las ordenes activas que tengas los usarios

@@ -31,8 +31,10 @@ def create_app():
     # Application Models
     from models.user2 import User
     from models.client import Client
+    from models.client_address import Client_adress_model
     from models.items import Items
     from models.orders import Orders
+    
 
     #with app.app_context():
         #db.create_all()
