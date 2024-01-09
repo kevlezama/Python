@@ -35,8 +35,8 @@ def create_app():
     from models.items import Items
     from models.orders import Orders
     
-
     #with app.app_context():
+        #db.drop_all()
         #db.create_all()
 
     return app

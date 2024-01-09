@@ -23,9 +23,9 @@ CLIENTS_ORDER_BY_CLIENT_ID_STM = select(Client).order_by(Client.client_id)
 def get_all_clients():
     query_execution = db.session.execute(CLIENTS_ORDER_BY_CLIENT_ID_STM).all()
     #clients = Client.query.all()
-    with db.session as session:
-        for row in session.execute(CLIENTS_ORDER_BY_CLIENT_ID_STM):
-            print(row)
+    #with db.session as session:
+    #    for row in session.execute(CLIENTS_ORDER_BY_CLIENT_ID_STM):
+    #        print(row)
     #return clients
     return query_execution
 
@@ -51,8 +51,6 @@ def create_new_client() -> any:
 
     CLIENTS_ORDER_BY_CLIENT_ID_STM.where(Client.client_email)
 
-
-
     client = Client(
         #user_uuid,
         clt_id,
@@ -69,7 +67,6 @@ def create_new_client() -> any:
  
     db.session.add(client)
     db.session.commit()
-  
 
     return jsonify(client), 200
 
