@@ -72,4 +72,3 @@ class Client(db.Model):
         }
 
         return data_request
-    

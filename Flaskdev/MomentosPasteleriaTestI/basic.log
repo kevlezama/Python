@@ -1,0 +1,11 @@
+2024-02-15 15:36:15 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-15 15:36:15 - INFO - [33mPress CTRL+C to quit[0m
+2024-02-15 15:36:30 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-15 15:36:30 - INFO - [33mPress CTRL+C to quit[0m
+2024-02-15 15:36:37 - INFO - -------------- START HERE ------------------
+2024-02-15 15:36:37 - INFO - SELECT client_model.client_uid AS client_model_client_uid, client_model.client_id AS client_model_client_id, client_model.client_name AS client_model_client_name, client_model.client_last_name AS client_model_client_last_name, client_model.client_email AS client_model_client_email, client_model.client_state AS client_model_client_state, client_model.client_city AS client_model_client_city, client_model.client_delivery_address AS client_model_client_delivery_address, client_model.client_created_timestamp AS client_model_client_created_timestamp 
+FROM client_model 
+WHERE client_model.client_email = %(client_email_1)s
+2024-02-15 15:36:37 - INFO - 127.0.0.1 - - [15/Feb/2024 15:36:37] "POST /clients/v2/createclient HTTP/1.1" 200 -

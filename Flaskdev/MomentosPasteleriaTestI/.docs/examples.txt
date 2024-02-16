@@ -8,6 +8,7 @@ client
     "client_state":"Buenos Aires",
     "client_city":"CABA",
     "client_delivery_address":"Carranza 2343" 
+    "client_delivery_address":{}
 }
 
 

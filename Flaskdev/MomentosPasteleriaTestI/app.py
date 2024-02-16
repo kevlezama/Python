@@ -11,6 +11,7 @@ from routes.client_route import client_route
 from routes.orders_route import order_route
 from routes.items_route import item_route
 
+
 def create_app():
 
     #Application configuration
